@@ -1,0 +1,12 @@
+namespace demo {
+   type FirstName inherits String
+   type LastName inherits String
+   [[PersonId is a unique identifier for a person]]    
+   type PersonId inherits String
+
+   model Person {
+      id : PersonId
+      firstName : FirstName
+      lastName : LastName
+   }
+}
