@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "DamageInfo",
+  "namespace" : "io.truthencode.ddo.model.protocol.parsers",
+  "doc" : "A most basic encapsulation of damage information.",
+  "fields" : [ {
+    "name" : "dice_modifier",
+    "type" : [ "null", "int" ],
+    "doc" : "Multiplier for the dice"
+  }, {
+    "name" : "dice",
+    "type" : [ "null", "string" ],
+    "doc" : "Dice expression in the form of nDm"
+  }, {
+    "name" : "extra",
+    "type" : [ "null", "int" ],
+    "doc" : "Additional Damage after the dice"
+  }, {
+    "name" : "damage_type",
+    "type" : {
+      "type" : "enum",
+      "name" : "DamageTrait",
+      "symbols" : [ "Acid", "Fire", "Cold", "Electric", "Force", "Sonic", "Poison", "Evil", "Good", "UnTyped", "Special", "Bludgeon", "Pierce", "Slash", "Magic" ]
+    },
+    "doc" : "Includes both Physical and Magical Damage types"
+  } ]
+}
